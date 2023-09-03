@@ -9,13 +9,6 @@ void clearScreen()
     printf("\033[H\033[J");
 }
 
-// Function to set cursor position
-void gotoxy(int x, int y)
-{
-    printf("\033[%d;%dH", y, x);
-    fflush(stdout);
-}
-
 // Structure to store user data
 struct UserData
 {
