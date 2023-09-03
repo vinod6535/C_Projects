@@ -38,8 +38,6 @@ GRADE  : [Grade]
 
 1.  Run the Program: Execute the compiled program:
 
-    shellCopy code
-
     `./marksheet_generator`
 
 Usage Instructions 📝
