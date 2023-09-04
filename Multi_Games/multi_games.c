@@ -81,7 +81,7 @@ void snakeMain()
     {
         printf("\n\n");
         printf("		** SNAKE AND LADDER GAME** \n\n       ");
-        printf("Snakes:- 25 to 9,\t 65 to 40,\t 99 to  1.\nLadder:- 13 to 42,\t 60 to 83,\t 70 to 93.\n");
+        printf("Snakes:- 25 to 9,\t 65 to 40,\t 99 to  1.\n\tLadder:- 13 to 42,\t 60 to 83,\t 70 to 93.\n");
         printf("Choose your option\n");
         printf("1. Player 1 plays\n");
         printf("2. Player 2 plays\n");
