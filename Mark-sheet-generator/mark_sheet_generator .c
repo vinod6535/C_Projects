@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 char name[20], fa_name[20], mo_name[20], s_name[40], dob[15];
+
 int roll_number, class, hi_marks, eng_marks, san_marks, math_marks, sci_marks, so_sci_marks;
 
 void generate_marksheet()
@@ -12,11 +14,10 @@ void generate_marksheet()
     presentage = grand_total / 6;
 
     printf("\n------------------------------------------------------------------------------------\n");
-    printf("|                  MP BOARD HIGH SCHOOL CERTIFICATE EXAMINATION                     |\n");
+    printf("|                 CBSE EXAMINATION CERTIFICATE		    |\n");
     printf("|------------------------------------------------------------------------------------\n");
     printf("|Your name: %s\tclass: %dth\tRoll Number: %d\n", name, class, roll_number);
     printf("|Father name: %s\n", fa_name);
-    printf("|Mother name: %s\n", mo_name);
     printf("|Date of birth: %s\n", dob);
     printf("|School name: %s\n", s_name);
     printf("|------------------------------------------------------------------------------------\n");
@@ -38,49 +39,47 @@ void generate_marksheet()
     }
     if (presentage >= 60 && presentage <= 80)
     {
-        printf("|RESULT : PASS IN FIRST DIVISION\n");
+        printf("|RESULT : PASS IN SECOND DIVISION\n");
         printf("|GRADE  : A\n");
     }
-    else if (presentage >= 41 && presentage <= 59)
-    {
-        printf("|RESULT : PASS IN SECOND DIVISION\n");
-        printf("|GRADE  : B\n");
-    }
-    else if (presentage >= 31 && presentage <= 40)
+    else if (presentage >= 33 && presentage <= 59)
     {
         printf("|RESULT : PASS IN THIRD DIVISION\n");
-        printf("|GRADE  : C\n");
+        printf("|GRADE  : B\n");
     }
-    else if (presentage >= 1 && presentage <= 30)
+    else if (presentage >= 1 && presentage <= 32)
     {
         printf("|RESULT : Fail\n");
         printf("|GRADE  : D\n");
     }
     printf("|------------------------------------------------------------------------------------\n\n");
 }
+
 void take_user_info()
 {
     char yesNo;
+
     printf("Enter your name: ");
-    fflush(stdin);
-    gets(name);
+    scanf("%s", name);
+
     printf("Enter father name: ");
-    fflush(stdin);
-    gets(fa_name);
-    printf("Enter mother name: ");
-    fflush(stdin);
-    gets(mo_name);
+    scanf("%s", fa_name);
+
+    
     printf("Enter school name: ");
-    fflush(stdin);
-    gets(s_name);
-    printf("Enter date of birth name: ");
-    fflush(stdin);
-    gets(dob);
+    scanf("%s", s_name);
+
+    printf("Enter date of birth: ");
+    scanf("%s", dob);
+
     printf("Enter class: ");
     scanf("%d", &class);
+
     printf("Enter roll No.: ");
     scanf("%d", &roll_number);
+
     printf("Enter subject marks\n");
+
 repeate:
     printf("Hindi marks: ");
     scanf("%d", &hi_marks);
@@ -129,9 +128,10 @@ repeate5:
         printf("invalid marks enter valid marks\n");
         goto repeate5;
     }
+
     printf("\nIf you want to generate your marksheet then press 'Y' otherwise 'N': ");
-    fflush(stdin);
-    scanf("%c", &yesNo);
+
+    scanf(" %c", &yesNo);
     if (yesNo == 'y' || yesNo == 'Y')
     {
         generate_marksheet();
@@ -141,14 +141,15 @@ repeate5:
         exit(0);
     }
 }
+
 void main()
 {
     char yesNo;
-    printf("\n             **Welcome to marsheet generation project**               \n\n");
-    printf("If you want to generate your marsheet ");
-    printf("then you have to provide some information\n");
-    printf("If you want to provide information then press 'Y' otherwise 'N': ");
-    scanf("%c", &yesNo);
+    printf("\n             **Welcome to marksheet generation project**               \n\n");
+    printf("If you want to generate your marksheet, ");
+    printf("you have to provide some information\n");
+    printf("If you want to provide information then press 'Y', otherwise 'N': ");
+    scanf(" %c", &yesNo);
     if (yesNo == 'y' || yesNo == 'Y')
     {
         take_user_info();
