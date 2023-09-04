@@ -9,6 +9,13 @@ void clearScreen()
     printf("\033[H\033[J");
 }
 
+// Function to set cursor position
+// void gotoxy(int x, int y)
+// {
+//     printf("\033[%d;%dH", y, x);
+//     fflush(stdout);
+// }
+
 // Structure to store user data
 struct UserData
 {
@@ -16,7 +23,7 @@ struct UserData
     char password[50];
     char fname[20];
     char lname[20];
-    char address[50];
+    char bankname[50];
     char typeaccount[20];
     int date, month, year;
     char adharnum[12];
@@ -47,8 +54,8 @@ void createAccount()
     printf("\nLAST NAME: ");
     scanf("%s", user.lname);
 
-    printf("\nADDRESS: ");
-    scanf("%s", user.address);
+    printf("\nBank Name: ");
+    scanf("%s", user.bankname);
 
     printf("\nACCOUNT TYPE: ");
     scanf("%s", user.typeaccount);
@@ -132,7 +139,7 @@ void displayAccount(char username[])
             printf("USERNAME: %s\n", user.username);
             printf("FIRST NAME: %s\n", user.fname);
             printf("LAST NAME: %s\n", user.lname);
-            printf("ADDRESS: %s\n", user.address);
+            printf("BANK NAME: %s\n", user.bankname);
             printf("ACCOUNT TYPE: %s\n", user.typeaccount);
             printf("DATE OF BIRTH: %02d-%02d-%04d\n", user.date, user.month, user.year);
             printf("ADHAR NUMBER: %s\n", user.adharnum);
