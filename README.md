@@ -39,9 +39,6 @@ If you'd like to contribute to this repository by adding your own C projects or 
 5. Open a pull request to this repository's `main` branch.
 6. Wait for your contribution to be reviewed and merged.
 
-## License 📝
-
-This repository is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 ## Contact 📧
 
